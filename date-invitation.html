@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Date Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card" data-step="intro">
+      <p class="kicker">eine kleine frage</p>
+      <h1>Willst du mit mir auf ein Date gehen?</h1>
+      <p class="subtitle">Nur eine richtige Antwort ist hier wirklich vorgesehen.</p>
+      <div class="actions">
+        <button class="button" type="button" id="yesButton">Ja</button>
+        <button class="button secondary runner" type="button" id="noButton" aria-label="Nein">Nein</button>
+      </div>
+      <p class="hint" id="noHint" aria-live="polite"></p>
+    </section>
+
+    <section class="card hidden" data-step="datetime">
+      <p class="kicker">date details</p>
+      <h2>Wann hast du Zeit?</h2>
+      <p class="subtitle">Such dir den perfekten Moment aus.</p>
+      <div class="fields">
+        <label>
+          Datum
+          <input id="dateInput" type="date" required>
+        </label>
+        <label>
+          Uhrzeit
+          <input id="timeInput" type="time" required>
+        </label>
+      </div>
+      <p class="hint" id="dateHint" aria-live="polite"></p>
+      <div class="actions">
+        <button class="button" type="button" id="dateNext">Weiter</button>
+      </div>
+    </section>
+
+    <section class="card wide-card hidden" data-step="food">
+      <p class="kicker">pick your vibe</p>
+      <h2>What are we feeling? 🍽️✨</h2>
+      <p class="subtitle">Wähle, worauf du am meisten Lust hast.</p>
+      <div class="food-grid" id="foodGrid">
+        <button class="choice" type="button" data-food="Pizza"><span class="emoji">🍕</span><span class="food-name">Pizza</span></button>
+        <button class="choice" type="button" data-food="Sushi"><span class="emoji">🍣</span><span class="food-name">Sushi</span></button>
+        <button class="choice" type="button" data-food="Burgers"><span class="emoji">🍔</span><span class="food-name">Burgers</span></button>
+        <button class="choice" type="button" data-food="Pasta"><span class="emoji">🍝</span><span class="food-name">Pasta</span></button>
+        <button class="choice" type="button" data-food="Tacos"><span class="emoji">🌮</span><span class="food-name">Tacos</span></button>
+        <button class="choice" type="button" data-food="Ramen"><span class="emoji">🍜</span><span class="food-name">Ramen</span></button>
+      </div>
+    </section>
+
+    <section class="card hidden" data-step="done">
+      <p class="kicker">confirmed</p>
+      <h2>Perfect, it’s a date 💌</h2>
+      <p class="subtitle">Ich habe alles gespeichert, was wir brauchen.</p>
+      <div class="summary" aria-live="polite">
+        <div class="summary-row"><span>Date</span><strong id="summaryDate">-</strong></div>
+        <div class="summary-row"><span>Time</span><strong id="summaryTime">-</strong></div>
+        <div class="summary-row"><span>Food</span><strong id="summaryFood">-</strong></div>
+      </div>
+      <div class="actions">
+        <button class="button" type="button" id="restartButton">Ich freue mich ❤️</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js">
+ 
+  </script>
+</body>
+</html>
